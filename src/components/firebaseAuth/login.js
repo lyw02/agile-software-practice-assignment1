@@ -73,6 +73,7 @@ export default function Login() {
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
         <Alert
+          id="alert"
           onClose={handleAlertClose}
           severity={status}
           sx={{ width: "100%" }}
@@ -129,17 +130,20 @@ export default function Login() {
                 sx={{ justifyContent: "center", padding: "10px" }}
               >
                 <TextField
+                  id="emailField"
                   label="Email"
                   variant="standard"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <TextField
+                  id="passwordField"
                   label="Password"
                   type="password"
                   variant="standard"
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <Button
+                  id="loginButton"
                   onClick={handleSubmit}
                   disabled={isLoading}
                   sx={{ margin: "10px" }}

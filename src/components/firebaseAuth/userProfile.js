@@ -91,7 +91,7 @@ export default function UserProfile() {
               {/* <Button onClick={handleChangeProfile} disabled>
                 SAVE CHANGE
               </Button> */}
-              <Button onClick={handleLogOut} disabled={!currentUser}>
+              <Button id="logoutButton" onClick={handleLogOut} disabled={!currentUser}>
                 LOG OUT
               </Button>
             </Stack>

@@ -71,6 +71,7 @@ export default function PasswordReset() {
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
         <Alert
+          id="alert"
           onClose={handleAlertClose}
           severity={status}
           sx={{ width: "100%" }}
@@ -101,11 +102,13 @@ export default function PasswordReset() {
               sx={{ justifyContent: "center", padding: "10px" }}
             >
               <TextField
+                id="emailField"
                 label="Email"
                 variant="standard"
                 onChange={(e) => setEmail(e.target.value)}
               />
               <Button
+                id="resetButton"
                 onClick={handleSubmit}
                 disabled={isLoading}
                 sx={{ margin: "10px" }}
