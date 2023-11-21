@@ -3,6 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 
   e2e: {
+    supportFile: 'cypress/support/index.js',
     "baseUrl": "http://localhost:3000/",
     "viewportWidth": 1980,
     "viewportHeight": 1080,

@@ -75,12 +75,20 @@ export default function UserProfile() {
             </Typography>
             {currentUser ? (
               <Stack direction="row" justifyContent="space-between">
-                <Typography variant="subtitle1">Email</Typography>
-                <Typography variant="subtitle1">{currentUser.email}</Typography>
+                <Typography id="emailLabel" variant="subtitle1">
+                  Email
+                </Typography>
+                <Typography id="email" variant="subtitle1">
+                  {currentUser.email}
+                </Typography>
               </Stack>
             ) : (
-              <Typography variant="subtitle1" textAlign="center">
-                Please {" "}
+              <Typography
+                id="pleaseLogin"
+                variant="subtitle1"
+                textAlign="center"
+              >
+                Please{" "}
                 <Link component={RouterLink} to="/login" underline="none">
                   log in
                 </Link>
@@ -91,7 +99,11 @@ export default function UserProfile() {
               {/* <Button onClick={handleChangeProfile} disabled>
                 SAVE CHANGE
               </Button> */}
-              <Button id="logoutButton" onClick={handleLogOut} disabled={!currentUser}>
+              <Button
+                id="logoutButton"
+                onClick={handleLogOut}
+                disabled={!currentUser}
+              >
                 LOG OUT
               </Button>
             </Stack>

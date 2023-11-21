@@ -84,3 +84,13 @@ Video:
     2. Click log out button.
 
     __Expected outcome__: URL should be "http://localhost:3000/" (jump to home page).
++ __User profile__
+  + __Test case__: should prompt the user to log in (if not logged in).
+    __Test step__: Visit user profile page (without logging in).
+    __Expected outcome__: Should include text "Please log in.".
+  + __Test case__: should display user profile information (if logged in).
+    __Test step__: 
+    1. Use a Cypress Custom command to log in.
+    2. Visit user profile page.
+
+    __Expected outcome__: Should contain "Email" label and user email.
