@@ -21,15 +21,15 @@ const ActorHeader = (props) => {
         margin: 0,
       }}
     >
-      <IconButton aria-label="go back" onClick={() => navigate(-1)} >
+      <IconButton aria-label="go back" onClick={() => navigate(-1)}>
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3">
+      <Typography id="actorName" variant="h4" component="h3">
         {actor.name}
       </Typography>
 
-      <IconButton aria-label="go forward" onClick={() => navigate(+1)} >
+      <IconButton aria-label="go forward" onClick={() => navigate(+1)}>
         <ArrowForwardIcon color="primary" fontSize="large" />
       </IconButton>
     </Paper>

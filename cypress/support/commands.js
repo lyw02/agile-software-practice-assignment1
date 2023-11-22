@@ -41,3 +41,12 @@ Cypress.Commands.add("newEmail", () => {
   result += "@example.com";
   return result;
 });
+
+Cypress.Commands.add("getActorDetails", (actorId) => {
+  return cy.request({
+    method: "GET",
+    url: `https://api.themoviedb.org/3/person/${actorId}?api_key=${Cypress.env(
+      "TMDB_KEY"
+    )}&language=en-US`,
+  });
+});

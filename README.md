@@ -41,7 +41,7 @@ Video:
     __Test step__: 
     1. Enter valid email and password.
     2. Click log in button.
-    3. Use a Cypress Custom command to handle logging in.
+    3. Use a Cypress Custom Command to handle logging in.
     4. Visit user profile page and click log out button (avoid effecting following tests).
 
     __Expected outcome__: URL should be "http://localhost:3000/" after logging in.
@@ -49,19 +49,19 @@ Video:
     __Test step__: 
     1. Enter invalid email and password.
     2. Click log in button.
-    3. Use a Cypress Custom command to handle logging in.
+    3. Use a Cypress Custom Command to handle logging in.
 
     __Expected outcome__: Display alert "Failed to log in".
   + __Test case__: Should sign up successfully.
     __Test step__: 
-    1. Use a Cypress Custom command to generate random email.
+    1. Use a Cypress Custom Command to generate random email.
     2. Enter valid email, password and password confirmation.
     3. Click sign up button.
 
     __Expected outcome__: URL should be "http://localhost:3000/login" (jump to log in page).
   + __Test case__: Should fail to sign up (passwords do not match).
     __Test step__: 
-    1. Use a Cypress Custom command to generate random email.
+    1. Use a Cypress Custom Command to generate random email.
     2. Enter valid email, but different password and password confirmation.
     3. Click sign up button.
 
@@ -90,7 +90,25 @@ Video:
     __Expected outcome__: Should include text "Please log in.".
   + __Test case__: should display user profile information (if logged in).
     __Test step__: 
-    1. Use a Cypress Custom command to log in.
+    1. Use a Cypress Custom Command to log in.
     2. Visit user profile page.
 
     __Expected outcome__: Should contain "Email" label and user email.
++ __Actor details__
+  + __Before each__: use a Cypress Custom Command to get actor details.
+  + __Test case__: should display actor details (e.g. name).
+    __Test step__: Get actor header element.
+    __Expected outcome__: Should include correct actor name.
+  + __Test case__: should expand and fold biography.
+    __Test step__: 
+    1. Get biography element.
+    2. Click Expand button.
+    3. Click Fold button.
+
+    __Expected outcome__: Should contain Expand or Fold button, and the button should control correctly.
+  + __Test case__: should navigate to movie details when clicking on a movie.
+    __Test step__: 
+    1. Get first movie list element.
+    2. Click the link in the element.
+
+    __Expected outcome__: Should visit movie page (i.e. URL should contain "/movie/").

@@ -47,9 +47,10 @@ const ActorDetails = ({ actor, cast }) => {
         <Box sx={{ ...boxStyle }}>
           {actor.biography ? (
             !isFullBiography ? (
-              <Typography variant="body2">
+              <Typography id="biography" variant="body2">
                 {excerpt(actor.biography)}
                 <Typography
+                  id="expandButton"
                   variant="body2"
                   onClick={() => setIsFullBiography(true)}
                   sx={{ ...expandButtonStyle }}
@@ -58,9 +59,10 @@ const ActorDetails = ({ actor, cast }) => {
                 </Typography>
               </Typography>
             ) : (
-              <Typography variant="body2">
+              <Typography id="biography" variant="body2">
                 {actor.biography}
                 <Typography
+                  id="foldButton"
                   variant="body2"
                   onClick={() => setIsFullBiography(false)}
                   sx={{ ...expandButtonStyle }}
@@ -139,7 +141,7 @@ const ActorDetails = ({ actor, cast }) => {
 
       <Paper>
         <Box
-          className="acting-list-box"
+          className="actingListBox"
           flexDirection="column"
           sx={{ ...boxStyle }}
         >
@@ -153,6 +155,7 @@ const ActorDetails = ({ actor, cast }) => {
                   sx={{ ...stackStyle }}
                 >
                   <Link
+                    className="movieLink"
                     component={RouterLink}
                     to={`/movies/${c.id}`}
                     underline="none"
