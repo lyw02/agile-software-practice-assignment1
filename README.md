@@ -222,8 +222,19 @@ e.g.
 
 ## Independent learning (If relevant).
 
-[ Briefly explain the work you did to satisfy the requirements of the Outstanding grade category, and include proof (e.g. screenshots) of its success. Also, mention the files that contain evidence of this work.
+__Cypress Component Testing__
 
-![](./images/sample.png)
+I created a Cypress Component Testing for ToolBar component.
+
++ cypress/component/toolBar.cy.js
++ cypress/support/component.js
++ cypress/support/component-index.html
++ src/cypress.config.js
+
+![](./public/readme_fig1.png)
+
+Reference: https://docs.cypress.io/guides/component-testing/react/overview
+
+
 
 State any other evidence of independent learning achieved while completing this assignment.
