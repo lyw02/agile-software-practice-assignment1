@@ -139,7 +139,7 @@ This repository contains the implementation of a React App, its associated Cypre
 
 ## React App Features.
 
-See above in README of WAD2 assignment.
+See above in description of WAD2 assignment.
 
 ## Automated Tests.
 
@@ -190,6 +190,10 @@ __User profile__
 3. Try to reset password with invalid email.
 + cypress/e2e/auth.cy.js
 
+1. Try to filter movies with invalid rating range.
+2. Try to filter movies with invalid release date range.
++ cypress/component/filterMoviesCard.cy.js
+
 ### Cypress Custom commands (if relevant).
 
 + cypress/e2e/auth.cy.js
@@ -207,6 +211,12 @@ __ToolBar component__
 4. The users can sort movie list by selecting sorting options.
 + cypress/component/toolBar.cy.js
 
+__FilterMoviesCard component__
+1. The component renders filtering options.
+2. The users can filter with rating.
+3. The users can filter with release date.
++ cypress/component/filterMoviesCard.cy.js
+
 ## Code Splitting.
 
 [Specify the pathname of each source code file that contains evidence of code splitting in your React app.]
@@ -218,15 +228,31 @@ e.g.
 
 ## Pull Requests.
 
-[ Specify the URL of the GitHub repository that contains a record of the Pull Requests made during this assignment's code (source code or test code). If you used GitLab Merge Requests instead, then simply state this.]
+https://github.com/lyw02/agile-software-practice-assignment1
 
 ## Independent learning (If relevant).
 
+__Cypress Custom Commands__
+
+I created Cypress Custom Commands in the support file.
+
++ cypress/support/component.js
++ cypress/e2e/auth.cy.js
++ cypress/e2e/userProfile.cy.js
++ cypress/e2e/actorDetails.cy.js
++ cypress/e2e/search.cy.js
++ cypress/e2e/sorting.cy.js
+
+![](./public/readme_fig2.png)
+
+Reference: https://docs.cypress.io/api/cypress-api/custom-commands#Syntax
+
 __Cypress Component Testing__
 
-I created a Cypress Component Testing for ToolBar component.
+I created Cypress Component Testing cases for ToolBar and FilterMoviesCard component, along with relevant config and support files.
 
 + cypress/component/toolBar.cy.js
++ cypress/component/filterMoviesCard.cy.js
 + cypress/support/component.js
 + cypress/support/component-index.html
 + src/cypress.config.js
@@ -234,7 +260,3 @@ I created a Cypress Component Testing for ToolBar component.
 ![](./public/readme_fig1.png)
 
 Reference: https://docs.cypress.io/guides/component-testing/react/overview
-
-
-
-State any other evidence of independent learning achieved while completing this assignment.
