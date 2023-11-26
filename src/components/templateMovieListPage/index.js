@@ -1,14 +1,20 @@
-import React, { useState } from "react";
-import Header from "../headerMovieList";
-import FilterCard from "../filterMoviesCard";
-import MovieList from "../movieList";
+import React, { useState, lazy, Suspense } from "react";
+// import Header from "../headerMovieList";
+// import FilterCard from "../filterMoviesCard";
+// import MovieList from "../movieList";
 import Grid from "@mui/material/Grid";
-import MovieEntryList from "../movieEntryList";
-import ToolBar from "../toolBar";
+// import MovieEntryList from "../movieEntryList";
+// import ToolBar from "../toolBar";
 import Pagination from "@mui/material/Pagination";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween"; // eslint-disable-line no-unused-vars
 import _ from "lodash";
+
+const Header = lazy(() => import("../headerMovieList"));
+const FilterCard = lazy(() => import("../filterMoviesCard"));
+const MovieList = lazy(() => import("../movieList"));
+const MovieEntryList = lazy(() => import("../movieEntryList"));
+const ToolBar = lazy(() => import("../toolBar"));
 
 function MovieListPageTemplate({
   movies,
@@ -130,10 +136,14 @@ function MovieListPageTemplate({
           />
         </Grid>
         {viewType === "Card" ? (
-          <MovieList action={action} movies={displayedMovies} />
+          <Suspense fallback={<h1>Building list</h1>}>
+            <MovieList action={action} movies={displayedMovies} />
+          </Suspense>
         ) : (
           <Grid key="listContainer" item xs={12} sm={6} md={8} lg={9} xl={10}>
-            <MovieEntryList action={action} movies={displayedMovies} />
+            <Suspense fallback={<h1>Building list</h1>}>
+              <MovieEntryList action={action} movies={displayedMovies} />
+            </Suspense>
           </Grid>
         )}
       </Grid>

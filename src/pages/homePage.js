@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { getMovies } from "../api/tmdb-api";
-import PageTemplate from "../components/templateMovieListPage";
+// import PageTemplate from "../components/templateMovieListPage";
 import { useQuery } from "react-query";
-import Spinner from "../components/spinner";
-import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
+// import Spinner from "../components/spinner";
+// import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
+
+const PageTemplate = lazy(() => import("../components/templateMovieListPage"));
+const Spinner = lazy(() => import("../components/spinner"));
+const AddToFavoritesIcon = lazy(() => import("../components/cardIcons/addToFavorites"));
 
 const HomePage = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
