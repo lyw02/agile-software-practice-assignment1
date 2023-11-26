@@ -49,12 +49,13 @@ const ToolBar = ({ viewType, setViewType, sortBy, setSortBy }) => {
     >
       <Stack direction="row" alignItems="center" spacing={1}>
         <TextField
+          id="searchField"
           label="Search from all movies"
           size="small"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <IconButton type="button" onClick={handleSearch} sx={{ p: "10px" }}>
+        <IconButton id="searchButton" type="button" onClick={handleSearch} sx={{ p: "10px" }}>
           <SearchIcon color="secondary" />
         </IconButton>
       </Stack>

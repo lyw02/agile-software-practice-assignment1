@@ -50,3 +50,12 @@ Cypress.Commands.add("getActorDetails", (actorId) => {
     )}&language=en-US`,
   });
 });
+
+Cypress.Commands.add("getSearchResults", (searchText) => {
+  return cy.request({
+    method: "GET",
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${Cypress.env(
+      "TMDB_KEY"
+    )}&language=en-US&query=${searchText}`,
+  });
+});
