@@ -65,10 +65,10 @@ const ToolBar = ({ viewType, setViewType, sortBy, setSortBy }) => {
         exclusive
         onChange={handleViewTypeChange}
       >
-        <ToggleButton value="Card">
+        <ToggleButton id="cardButton" value="Card">
           <CardViewIcon />
         </ToggleButton>
-        <ToggleButton value="List">
+        <ToggleButton id="listButton" value="List">
           <ListViewIcon />
         </ToggleButton>
       </ToggleButtonGroup>
