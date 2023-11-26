@@ -213,12 +213,11 @@ __ToolBar component__
 
 ## Code Splitting.
 
-[Specify the pathname of each source code file that contains evidence of code splitting in your React app.]
-
-e.g.
 + src/index.js
-+ src/pages/favouriteMoviesPage.js
-+ src/components/movieCard/index.js
++ src/pages/homePage.js
++ src/component/templateMovieListPage/index.js
++ src/component/templateMoviePage/index.js
++ src/component/templateActorPage/index.js
 
 ## Pull Requests.
 

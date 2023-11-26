@@ -1,11 +1,14 @@
-import React from "react";
-import ActorHeader from "../headerActor";
+import React, { lazy, Suspense } from "react";
+// import ActorHeader from "../headerActor";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { getActorImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
-import Spinner from "../spinner";
+// import Spinner from "../spinner";
+
+const ActorHeader = lazy(() => import("../headerActor"));
+const Spinner = lazy(() => import("../spinner"));
 
 const TemplateActorPage = ({ actor, children }) => {
   const { data, error, isLoading, isError } = useQuery(
