@@ -190,6 +190,10 @@ __User profile__
 3. Try to reset password with invalid email.
 + cypress/e2e/auth.cy.js
 
+1. Try to filter movies with invalid rating range.
+2. Try to filter movies with invalid release date range.
++ cypress/component/filterMoviesCard.cy.js
+
 ### Cypress Custom commands (if relevant).
 
 + cypress/e2e/auth.cy.js
@@ -206,6 +210,12 @@ __ToolBar component__
 3. The users can switch view type bu clicking buttons.
 4. The users can sort movie list by selecting sorting options.
 + cypress/component/toolBar.cy.js
+
+__Filter Movies Card component__
+1. The component renders filtering options with default values.
+2. The users can filter with ratings.
+2. The users can filter with release date.
++ cypress/component/filterMoviesCard.cy.js
 
 ## Code Splitting.
 

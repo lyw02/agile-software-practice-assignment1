@@ -119,7 +119,7 @@ export default function FilterMoviesCard(props) {
         <Stack direction="row" justifyContent="space-between">
           <TextField
             sx={{ ...formControl, minWidth: 100 }}
-            id="rating-start"
+            id="ratingStart"
             label="Rating from"
             variant="filled"
             value={props.ratingStartFilter}
@@ -127,7 +127,7 @@ export default function FilterMoviesCard(props) {
           />
           <TextField
             sx={{ ...formControl, minWidth: 100 }}
-            id="rating-start"
+            id="ratingEnd"
             label="to"
             variant="filled"
             value={props.ratingEndFilter}
@@ -140,12 +140,14 @@ export default function FilterMoviesCard(props) {
             adapterLocale="en-gb"
           >
             <DatePicker
+              id="dateStart"
               label="Release time from"
               value={props.releaseDateStartFilter}
               onChange={handleReleaseDateStartChange}
               sx={{ ...formControl, minWidth: 100 }}
             />
             <DatePicker
+              id="dateEnd"
               label="to"
               value={props.releaseDateEndFilter}
               onChange={handleReleaseDateEndChange}
