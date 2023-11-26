@@ -59,3 +59,13 @@ Cypress.Commands.add("getSearchResults", (searchText) => {
     )}&language=en-US&query=${searchText}`,
   });
 });
+
+Cypress.Commands.add("getMovieList", () => {
+  return cy.request({
+    method: "GET",
+    url: `https://api.themoviedb.org/3/discover/movie?api_key=${Cypress.env(
+      "TMDB_KEY"
+    )}&language=en-US`,
+  });
+});
+

@@ -76,14 +76,14 @@ const ToolBar = ({ viewType, setViewType, sortBy, setSortBy }) => {
         <InputLabel id="sort-by-label">Sort by</InputLabel>
         <Select
           labelId="sort-by-label"
-          id="sort-by"
+          id="sortBy"
           value={sortBy}
           label="Sort by"
           onChange={handleSortByChange}
         >
-          <MenuItem value="title">Title</MenuItem>
-          <MenuItem value="releaseDate">Release Date</MenuItem>
-          <MenuItem value="rating">Rating</MenuItem>
+          <MenuItem id="title" value="title">Title</MenuItem>
+          <MenuItem id="releaseDate" value="releaseDate">Release Date</MenuItem>
+          <MenuItem id="rating" value="rating">Rating</MenuItem>
         </Select>
       </FormControl>
     </Box>
